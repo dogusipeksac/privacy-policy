@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gizlilik Politikası · MyMapCamera</title>
+  <title>Gizlilik Politikası · Anı Yakala</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,11 +13,10 @@
       --card:      #FFFFFF;
       --ink:       #1A2238;
       --ink-soft:  #5A6378;
-      --primary:   #E8602B;        /* sıcak turuncu (kamera/günbatımı) */
+      --primary:   #E8602B;
       --primary-soft: #FFE7DA;
-      --accent:    #0E7C7B;        /* teal (harita/su) */
+      --accent:    #0E7C7B;
       --accent-soft: #DCF1F0;
-      --gold:      #F2A93B;
       --line:      #EFE6D6;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -51,11 +50,6 @@
       content: ''; position: absolute; right: -40px; top: -40px;
       width: 160px; height: 160px;
       background: rgba(255,255,255,0.12); border-radius: 50%;
-    }
-    .header::before {
-      content: ''; position: absolute; right: 30px; bottom: -30px;
-      width: 90px; height: 90px;
-      background: rgba(255,255,255,0.08); border-radius: 50%;
     }
     .header h1 {
       font-size: 32px; font-weight: 800; letter-spacing: -0.02em;
@@ -110,7 +104,7 @@
       background: var(--primary-soft); color: var(--primary);
       padding: 2px 8px; border-radius: 5px;
       font-size: 0.88em; font-weight: 600;
-      font-family: 'SF Mono', ui-monospace, monospace;
+      font-family: ui-monospace, monospace;
     }
     a {
       color: var(--primary); font-weight: 600; text-decoration: none;
@@ -139,51 +133,57 @@
   <div class="container">
 
     <div class="header">
-      <span class="badge">📍 MyMapCamera</span>
+      <span class="badge">Anı Yakala</span>
       <h1>Gizlilik Politikası</h1>
       <div class="updated"><strong>Son güncelleme:</strong> 27 Nisan 2026</div>
     </div>
 
     <div class="intro">
-      Bu Gizlilik Politikası, <strong>MyMapCamera</strong> (“Uygulama”) uygulamasını kullandığınızda hangi verilerin işlendiğini, bu verilerin hangi amaçlarla kullanıldığını ve haklarınızı açıklar.
+      Bu Gizlilik Politikası, <strong>Anı Yakala</strong> (“Uygulama”) uygulamasını kullandığınızda hangi verilerin işlenebileceğini, hangi üçüncü taraf hizmetlerinin devreye girebileceğini ve haklarınızı açıklar.
     </div>
 
-    <h3><span class="num">1</span> Toplanan Veriler</h3>
-    <p>Uygulama, aşağıdaki verileri yalnızca uygulamanın işlevlerini sağlayabilmek için işleyebilir:</p>
+    <h3><span class="num">1</span> Toplanan ve işlenebilen veriler</h3>
+    <p>Uygulama, işlevleri yerine getirebilmek için aşağıdaki verilerle sınırlı şekilde çalışır:</p>
     <ul>
       <li><strong>Konum bilgisi (GPS):</strong> Fotoğraflar üzerine konum (şehir/adres/koordinat) bilgisi eklemek ve harita görünümünü göstermek için.</li>
       <li><strong>Kamera verisi:</strong> Fotoğraf çekebilmek için.</li>
       <li><strong>Fotoğraf/Medya erişimi:</strong> Çekilen fotoğrafları cihazınıza kaydedebilmek ve galeride gösterebilmek için.</li>
-      <li><strong>Teknik veriler:</strong> Uygulamanın kararlılığını ve performansını iyileştirmek amacıyla sınırlı teknik bilgiler (ör. hata kayıtları) oluşabilir.</li>
+      <li><strong>Teknik ve çökme verileri:</strong> Kararlılığı iyileştirmek amacıyla Firebase Crashlytics aracılığıyla çökme raporları (ör. hata günlükleri, cihaz ve uygulama ortamına ilişkin metrikler) Google tarafına iletilebilir.</li>
+      <li><strong>Reklam ve cihaz tanımlayıcıları:</strong> Reklamlar Google AdMob üzerinden gösterilir. Google, reklam gösterme ve ölçümleme için cihaz tanımlayıcıları ve ilgili teknik veriler işleyebilir.</li>
     </ul>
 
-    <h3><span class="num">2</span> Verilerin Kullanım Amaçları</h3>
+    <h3><span class="num">2</span> Verilerin kullanım amaçları</h3>
     <ul>
       <li>Fotoğraf çekme ve fotoğrafı cihazınıza kaydetme</li>
       <li>Fotoğraf üzerine seçilen şablona göre konum ve zaman bilgisi ekleme</li>
-      <li>Harita üzerinde konum görüntüleme</li>
-      <li>Uygulama deneyimini ve kararlılığını iyileştirme</li>
+      <li>Harita üzerinde konum görüntüleme ve hava durumu bilgisini gösterme</li>
+      <li>Uygulama kararlılığını ve deneyimini iyileştirme</li>
+      <li>Reklam gösterimi (AdMob)</li>
     </ul>
 
-    <h3><span class="num">3</span> Üçüncü Taraf Hizmetler</h3>
-    <p>Uygulama, bazı özellikler için üçüncü taraf servislerle iletişim kurabilir:</p>
+    <h3><span class="num">3</span> Üçüncü taraf hizmetler</h3>
+    <p>Uygulama aşağıdaki servislerle etkileşebilir (her birinin kendi gizlilik koşulları geçerlidir):</p>
     <ul>
-      <li><strong>MET Norway Hava Durumu API:</strong> Seçili konuma göre sıcaklık, rüzgar, basınç ve nem bilgisini almak için kullanılır. Bu isteklerde <strong>konum koordinatları</strong> (enlem/boylam) API’ye gönderilir. Servis sağlayıcı: MET Norway (<code>api.met.no</code>).</li>
-    </ul>
-    <p>Uygulama, üçüncü taraf servislerin kendi gizlilik uygulamalarından sorumlu değildir. Bu servisleri kullanırken ilgili sağlayıcının koşulları/politikaları geçerli olabilir.</p>
-
-    <h3><span class="num">4</span> Verilerin Saklanması</h3>
-    <ul>
-      <li>Uygulama, çektiğiniz fotoğrafları cihazınızın depolamasına (seçtiğiniz klasöre) kaydeder.</li>
-      <li>Konum ve şablon bilgileri fotoğrafın üzerine işlenebilir. Bu durumda bu bilgiler fotoğrafın kendisinin bir parçası haline gelir.</li>
-      <li>Uygulama, konum geçmişinizi bir sunucuya yükleyip saklamaz. (Uygulama bir kullanıcı hesabı veya bulut senkronizasyonu içermez.)</li>
+      <li><strong>MET Norway Hava Durumu API (<code>api.met.no</code>):</strong> Seçili konuma göre hava bilgisi için <strong>enlem/boylam</strong> gönderilir.</li>
+      <li><strong>Google Mobile Ads (AdMob):</strong> Geçiş, ödüllü ve banner reklamlar. Google’ın reklam ve ölçümleme için veri işlemesi mümkündür. Ayrıntılar: <a href="https://policies.google.com/privacy" rel="noopener">Google Gizlilik Politikası</a>, <a href="https://support.google.com/admob/answer/6128543" rel="noopener">AdMob bilgisi</a>.</li>
+      <li><strong>Google Firebase / Crashlytics:</strong> Çökme raporları ve ilişkili teknik bilgiler Google’a iletilebilir.</li>
+      <li><strong>OpenStreetMap harita döşemeleri:</strong> Harita görüntüsü için karo sunucularına istek yapılır; kullanım <a href="https://operations.osmfoundation.org/policies/tiles/" rel="noopener">OSMF döşeme politikasına</a> tabidir.</li>
+      <li><strong>Google Fonts:</strong> Bazı yazı tipleri Google üzerinden yüklenirse ilgili ağ istekleri Google’a gidebilir.</li>
     </ul>
 
-    <h3><span class="num">5</span> Verilerin Paylaşılması</h3>
+    <h3><span class="num">4</span> Verilerin saklanması</h3>
     <ul>
-      <li>Uygulama kişisel verilerinizi <strong>satmaz</strong>.</li>
-      <li>Uygulama verilerinizi <strong>reklam amaçlı</strong> üçüncü kişilerle paylaşmaz.</li>
-      <li>Yalnızca hava durumu bilgisi almak gibi işlevler için gerekli olan minimum veriler (örn. koordinat) ilgili servise iletilebilir.</li>
+      <li>Fotoğraflar cihazınızın depolamasına (seçtiğiniz klasöre) kaydedilir.</li>
+      <li>Konum ve şablon bilgileri fotoğraf üzerine işlenebilir; bu bilgiler fotoğraf dosyasının parçası olur.</li>
+      <li>Uygulama, kullanıcı hesabı veya bulut senkronizasyonu sunmaz; konum geçmişinizi kendi sunucularımızda saklamayız.</li>
+    </ul>
+
+    <h3><span class="num">5</span> Paylaşım ve satış</h3>
+    <ul>
+      <li>Anı Yakala olarak kişisel verilerinizi <strong>satmayız</strong>.</li>
+      <li>Reklamlar <strong>Google AdMob</strong> ile gösterildiği için Google ve bağlı sağlayıcılar, reklam politikalarına uygun şekilde tanımlayıcılar ve kullanım verisi işleyebilir; bu işleme Google’ın politikalarına tabidir.</li>
+      <li>Çökme analizi için <strong>Crashlytics</strong> üzerinden Google’a teknik veri iletilebilir.</li>
+      <li>Hava durumu için gerekli minimum konum verisi MET Norway API’sine iletilir.</li>
     </ul>
 
     <h3><span class="num">6</span> İzinler</h3>
@@ -193,16 +193,16 @@
       <li><strong>Konum izni:</strong> Konum bilgisini göstermek ve fotoğrafa eklemek için</li>
       <li><strong>Fotoğraf/Medya izni:</strong> Fotoğrafı kaydetmek ve galeride göstermek için</li>
     </ul>
-    <p>İzinleri cihaz ayarlarından dilediğiniz zaman kapatabilirsiniz. Ancak bazı özellikler çalışmayabilir.</p>
+    <p>İzinleri cihaz ayarlarından kapatabilirsiniz; bazı özellikler çalışmayabilir.</p>
 
     <h3><span class="num">7</span> Güvenlik</h3>
-    <p>Verilerinizi korumak için makul teknik önlemler alınır. Ancak hiçbir yöntem %100 güvenli değildir.</p>
+    <p>Verilerinizi korumak için makul teknik önlemler alınır. Hiçbir iletim veya depolama yöntemi %100 güvenli değildir.</p>
 
-    <h3><span class="num">8</span> Çocukların Gizliliği</h3>
-    <p>Uygulama 13 yaş altındaki çocuklara yönelik değildir ve bilerek 13 yaş altından kişisel veri toplamayı hedeflemez.</p>
+    <h3><span class="num">8</span> Çocukların gizliliği</h3>
+    <p>Uygulama 13 yaş altı çocuklara özel olarak yönelik değildir ve bilerek 13 yaş altından kişisel veri toplamayı hedeflemez.</p>
 
     <h3><span class="num">9</span> Değişiklikler</h3>
-    <p>Bu politika zaman zaman güncellenebilir. Güncellemeler bu sayfada yayınlanır ve “Son güncelleme” tarihi değiştirilir.</p>
+    <p>Bu politika güncellenebilir. Güncel metin bu sayfada yayımlanır ve “Son güncelleme” tarihi değiştirilir.</p>
 
     <div class="contact-box">
       <h3><span class="num">10</span> İletişim</h3>
