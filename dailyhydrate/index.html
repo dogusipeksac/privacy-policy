@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gizlilik Politikası · Daily Hydrate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F0F9FF;
+      --card: #FFFFFF;
+      --ink: #0C4A6E;
+      --ink-soft: #475569;
+      --primary: #0284C7;
+      --primary-soft: #E0F2FE;
+      --accent: #06B6D4;
+      --accent-soft: #CFFAFE;
+      --line: #BAE6FD;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 16px;
+      padding: 32px 20px 64px;
+    }
+
+    .back-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      margin: 0 auto 24px;
+      width: fit-content;
+      max-width: 760px;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: 20px;
+      padding: 48px 44px;
+      box-shadow: 0 4px 24px rgba(2, 132, 199, 0.08);
+      border: 1px solid var(--line);
+    }
+
+    .header {
+      padding: 28px 28px 30px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #0284C7 0%, #06B6D4 100%);
+      color: white;
+      margin-bottom: 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      right: -30px;
+      top: -30px;
+      width: 140px;
+      height: 140px;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 50%;
+    }
+
+    .header .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.22);
+      padding: 5px 12px;
+      border-radius: 100px;
+      margin-bottom: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header .updated {
+      font-size: 14px;
+      opacity: 0.95;
+      position: relative;
+      z-index: 1;
+    }
+
+    .intro {
+      font-size: 16px;
+      color: var(--ink-soft);
+      padding: 20px 22px;
+      background: var(--primary-soft);
+      border-left: 4px solid var(--primary);
+      border-radius: 10px;
+      margin-bottom: 36px;
+    }
+
+    .intro strong { color: var(--primary); font-weight: 700; }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 32px 0 14px;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h3 .num {
+      display: inline-grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    h3:nth-of-type(even) .num {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    p { color: var(--ink-soft); margin-bottom: 12px; }
+    p strong { color: var(--ink); font-weight: 700; }
+
+    ul {
+      list-style: none;
+      margin: 6px 0 14px;
+    }
+
+    li {
+      position: relative;
+      padding: 10px 0 10px 30px;
+      color: var(--ink-soft);
+      border-bottom: 1px dashed var(--line);
+    }
+
+    li:last-child { border-bottom: none; }
+
+    li::before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 17px;
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px var(--primary-soft);
+    }
+
+    li strong { color: var(--ink); font-weight: 700; }
+
+    a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1.5px solid var(--primary-soft);
+      transition: border-color 0.2s;
+    }
+
+    a:hover { border-bottom-color: var(--primary); }
+
+    .contact-box {
+      margin-top: 28px;
+      padding: 22px 24px;
+      background: linear-gradient(135deg, var(--accent-soft), var(--primary-soft));
+      border-radius: 12px;
+      border: 1px solid rgba(2, 132, 199, 0.18);
+    }
+
+    .contact-box h3 { margin-top: 0; }
+    .contact-box h3 .num { background: var(--primary); color: white; }
+
+    .copyright {
+      text-align: center;
+      color: var(--ink-soft);
+      font-size: 14px;
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 16px 12px 40px; }
+      .container { padding: 28px 22px; border-radius: 16px; }
+      .header { padding: 24px 22px; }
+      .header h1 { font-size: 26px; }
+      h3 { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="back-link" href="../">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M12 19l-7-7 7-7"/>
+    </svg>
+    Tüm uygulamalar
+  </a>
+
+  <div class="container">
+    <div class="header">
+      <span class="badge">Daily Hydrate</span>
+      <h1>Gizlilik Politikası</h1>
+      <div class="updated"><strong>Son güncelleme:</strong> 27 Kasım 2025</div>
+    </div>
+
+    <div class="intro">
+      Bu Gizlilik Politikası, <strong>Daily Hydrate</strong> (“Su İçme Hatırlatıcısı”, “Uygulama”) uygulamasını kullandığınızda hangi verilerin işlenebileceğini, hangi üçüncü taraf hizmetlerinin devreye girebileceğini ve haklarınızı açıklar.
+    </div>
+
+    <h3><span class="num">1</span> Giriş</h3>
+    <p>
+      Doğuş İpeksaç tarafından geliştirilen Daily Hydrate uygulaması kullanıcılarının gizliliğini korumaya kararlıdır.
+      Uygulama temel olarak cihazınızda yerel olarak çalışır; hatırlatıcı ayarları ve tercihleriniz sunucularımıza gönderilmez.
+    </p>
+
+    <h3><span class="num">2</span> Doğrudan toplanmayan bilgiler</h3>
+    <p><strong>Uygulama ad, e-posta, telefon numarası veya benzeri kimlik bilgilerinizi talep etmez ve saklamaz.</strong></p>
+    <p>
+      Hesap oluşturma veya bulut senkronizasyonu yoktur. Su içme hedefleri, hatırlatıcı zamanlamaları ve uygulama ayarları yalnızca cihazınızda tutulur.
+    </p>
+
+    <h3><span class="num">3</span> Üçüncü taraflarca işlenebilen veriler</h3>
+    <p>Uygulama işlevselliğini iyileştirmek ve reklam göstermek için aşağıdaki hizmetler devreye girebilir:</p>
+    <ul>
+      <li><strong>Firebase Analytics:</strong> Uygulama kullanım istatistikleri, çökme raporları ve performans metrikleri (kişisel kimlik saptaması olmadan)</li>
+      <li><strong>Cihaz bilgileri:</strong> İşletim sistemi sürümü, cihaz modeli gibi teknik veriler</li>
+      <li><strong>Google AdMob:</strong> Reklam gösterimi için cihaz tanımlayıcıları (Reklam Kimliği), uygulama kullanım davranışı ve tahmini konum</li>
+    </ul>
+    <p>
+      Reklam kişiselleştirmesini istemiyorsanız cihazınızın reklam ayarlarından
+      “Reklam Kişiselleştirmesini Sınırla” seçeneğini etkinleştirebilirsiniz.
+      Google Gizlilik Politikası: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>
+    </p>
+
+    <h3><span class="num">4</span> Bildirim izinleri</h3>
+    <p>
+      Uygulama, su içme hatırlatıcılarını gönderebilmek için bildirim izni talep eder.
+      Bu izin yalnızca hatırlatıcı bildirimleri için kullanılır. İstediğiniz zaman cihaz ayarlarından kapatabilirsiniz.
+    </p>
+
+    <h3><span class="num">5</span> Firebase kullanımı</h3>
+    <p>
+      Performans izleme, analitik ve çökme raporlaması için Google Firebase kullanılır.
+      Firebase aşağıdaki verileri toplayabilir:
+    </p>
+    <ul>
+      <li>Uygulama kullanım istatistikleri</li>
+      <li>Sistem performansı ve çökme raporları</li>
+      <li>İşletim sistemi ve cihaz bilgileri</li>
+    </ul>
+    <p>Firebase Gizlilik Politikası: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></p>
+
+    <h3><span class="num">6</span> Veri güvenliği</h3>
+    <p>
+      Yerel veriler cihazınızda kalır. Üçüncü taraf servislerle yapılan iletişim şifreli (HTTPS/SSL) bağlantılar üzerinden gerçekleşir.
+    </p>
+
+    <h3><span class="num">7</span> Çocukların gizliliği</h3>
+    <p>
+      Uygulama 13 yaşından küçük çocuklara özel olarak yönelik değildir.
+      Ebeveynler cihazlarında uygun ebeveyn denetimi ayarlarını yapmalıdır.
+    </p>
+
+    <h3><span class="num">8</span> Veri saklama</h3>
+    <ul>
+      <li>Yerel veriler (hatırlatıcılar, ayarlar) uygulamayı kaldırana kadar cihazda kalır.</li>
+      <li>Firebase Analytics ve Ads verisi Google'ın veri saklama ilkelerine tabidir (genellikle 60 gün inaktiflikten sonra silinir).</li>
+    </ul>
+
+    <h3><span class="num">9</span> Üçüncü taraf hizmetleri</h3>
+    <ul>
+      <li><strong>Google Firebase:</strong> Analitik ve çökme raporlaması</li>
+      <li><strong>Google AdMob:</strong> Reklam gösterimi</li>
+      <li><strong>Google Play Services:</strong> Temel Android işlevleri</li>
+    </ul>
+
+    <h3><span class="num">10</span> Kullanıcı hakları</h3>
+    <p>
+      Uygulama doğrudan kişisel veri toplamadığı için veri silme veya taşıma talepleri bu kapsamda geçerli değildir.
+      Firebase ve Google Ads verileriniz hakkında <a href="https://myaccount.google.com/privacy" target="_blank" rel="noopener">Google Hesabınızdan</a> ayarlarınızı yönetebilirsiniz.
+    </p>
+
+    <h3><span class="num">11</span> Değişiklikler</h3>
+    <p>
+      Bu politika güncellenebilir. Önemli değişikliklerde uygulama üzerinden bildirim gösterilebilir.
+      Güncel metin her zaman bu sayfada yayımlanır.
+    </p>
+
+    <div class="contact-box">
+      <h3><span class="num">12</span> İletişim</h3>
+      <p><strong>Geliştirici:</strong> Doğuş İpeksaç</p>
+      <p><strong>E-posta:</strong> <a href="mailto:ipeksac.dogus.19@gmail.com">ipeksac.dogus.19@gmail.com</a></p>
+    </div>
+
+    <h3><span class="num">13</span> Yasal uyum</h3>
+    <p>
+      Bu Gizlilik Politikası, KVKK ve uluslararası gizlilik standartları ile Google Play Store gerekliliklerine uygun olarak hazırlanmıştır.
+    </p>
+
+    <p class="copyright">© 2025 Doğuş İpeksaç. Tüm hakları saklıdır.</p>
+  </div>
+</body>
+</html>

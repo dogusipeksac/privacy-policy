@@ -120,6 +120,19 @@
     }
     .contact-box h3 { margin-top: 0; }
     .contact-box h3 .num { background: var(--accent); color: white; }
+    .back-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      margin: 0 auto 24px;
+      width: fit-content;
+      max-width: 760px;
+    }
+    .back-link:hover { text-decoration: underline; }
     @media (max-width: 600px) {
       body { padding: 16px 12px 40px; }
       .container { padding: 28px 22px; border-radius: 16px; }
@@ -130,6 +143,12 @@
   </style>
 </head>
 <body>
+  <a class="back-link" href="../">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M12 19l-7-7 7-7"/>
+    </svg>
+    Tüm uygulamalar
+  </a>
   <div class="container">
 
     <div class="header">
