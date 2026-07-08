@@ -1,169 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kube Rush — Privacy Policy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy · Kube Rush</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #0C1113;
-      --panel: #141B1E;
-      --border: #232E33;
-      --text: #EAF2F1;
-      --dim: #7C8B8E;
-      --accent: #B4FF39;
+      --card: #141B1E;
+      --ink: #EAF2F1;
+      --ink-soft: #7C8B8E;
+      --primary: #B4FF39;
+      --primary-soft: rgba(180, 255, 57, 0.12);
+      --accent: #6EE7B7;
+      --accent-soft: rgba(110, 231, 183, 0.12);
+      --line: #232E33;
     }
-    * { box-sizing: border-box; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      margin: 0;
-      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
       background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 16px;
+      padding: 32px 20px 64px;
     }
-    .wrap {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 48px 20px 80px;
-    }
-    .brand {
+
+    .back-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
       font-size: 14px;
-      letter-spacing: 0.2em;
-      color: var(--accent);
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-bottom: 12px;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      margin: 0 auto 24px;
+      width: fit-content;
+      max-width: 760px;
     }
-    h1 {
-      margin: 0 0 8px;
-      font-size: 2rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
+
+    .back-link:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: 20px;
+      padding: 48px 44px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--line);
     }
-    .updated { color: var(--dim); font-size: 0.9rem; margin-bottom: 32px; }
-    h2 {
-      margin: 36px 0 12px;
-      font-size: 1.05rem;
+
+    .header {
+      padding: 28px 28px 30px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #1A2E14 0%, #0C1113 60%, #14281A 100%);
+      border: 1px solid rgba(180, 255, 57, 0.25);
+      color: white;
+      margin-bottom: 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      right: -30px;
+      top: -30px;
+      width: 140px;
+      height: 140px;
+      background: rgba(180, 255, 57, 0.1);
+      border-radius: 50%;
+    }
+
+    .header .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      background: rgba(180, 255, 57, 0.18);
+      color: var(--primary);
+      padding: 5px 12px;
+      border-radius: 100px;
+      margin-bottom: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header .updated {
+      font-size: 14px;
+      color: var(--ink-soft);
+      position: relative;
+      z-index: 1;
+    }
+
+    .intro {
+      font-size: 16px;
+      color: var(--ink-soft);
+      padding: 20px 22px;
+      background: var(--primary-soft);
+      border-left: 4px solid var(--primary);
+      border-radius: 10px;
+      margin-bottom: 36px;
+    }
+
+    .intro strong { color: var(--primary); font-weight: 700; }
+    .intro code {
+      background: rgba(180, 255, 57, 0.15);
+      color: var(--primary);
+      padding: 2px 8px;
+      border-radius: 5px;
+      font-size: 0.88em;
+      font-weight: 600;
+      font-family: ui-monospace, monospace;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 32px 0 14px;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h3 .num {
+      display: inline-grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    h3:nth-of-type(even) .num {
+      background: var(--accent-soft);
       color: var(--accent);
     }
-    p, li { color: var(--text); }
-    ul { padding-left: 1.2rem; }
-    a { color: var(--accent); }
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      padding: 20px;
-      margin: 24px 0;
+
+    p { color: var(--ink-soft); margin-bottom: 12px; }
+    p strong { color: var(--ink); font-weight: 700; }
+
+    ul {
+      list-style: none;
+      margin: 6px 0 14px;
     }
-    nav { margin-top: 40px; font-size: 0.9rem; }
-    nav a { margin-right: 16px; }
+
+    li {
+      position: relative;
+      padding: 10px 0 10px 30px;
+      color: var(--ink-soft);
+      border-bottom: 1px dashed var(--line);
+    }
+
+    li:last-child { border-bottom: none; }
+
+    li::before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 17px;
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px var(--primary-soft);
+    }
+
+    li strong { color: var(--ink); font-weight: 700; }
+
+    a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1.5px solid rgba(180, 255, 57, 0.25);
+      transition: border-color 0.2s;
+    }
+
+    a:hover { border-bottom-color: var(--primary); }
+
+    .contact-box {
+      margin-top: 28px;
+      padding: 22px 24px;
+      background: linear-gradient(135deg, var(--accent-soft), var(--primary-soft));
+      border-radius: 12px;
+      border: 1px solid rgba(180, 255, 57, 0.18);
+    }
+
+    .contact-box h3 { margin-top: 0; }
+    .contact-box h3 .num { background: var(--primary); color: #0C1113; }
+
+    .copyright {
+      text-align: center;
+      color: var(--ink-soft);
+      font-size: 14px;
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 16px 12px 40px; }
+      .container { padding: 28px 22px; border-radius: 16px; }
+      .header { padding: 24px 22px; }
+      .header h1 { font-size: 26px; }
+      h3 { font-size: 18px; }
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="brand">Kube Rush</div>
-    <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: July 8, 2026</p>
+  <a class="back-link" href="../">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M12 19l-7-7 7-7"/>
+    </svg>
+    All apps
+  </a>
 
-    <div class="card">
-      <p>
-        This Privacy Policy explains how <strong>Kube Rush</strong> (“the App”, “we”, “us”)
-        handles information when you use the mobile game published under the package
-        <code>com.dogusipeksac.kuberush</code>.
-      </p>
+  <div class="container">
+    <div class="header">
+      <span class="badge">Kube Rush</span>
+      <h1>Privacy Policy</h1>
+      <div class="updated"><strong>Last updated:</strong> July 8, 2026</div>
     </div>
 
-    <h2>1. Who we are</h2>
+    <div class="intro">
+      This Privacy Policy explains how <strong>Kube Rush</strong> (“the App”) handles information when you use the mobile game published under the package <code>com.dogusipeksac.kuberush</code>.
+    </div>
+
+    <h3><span class="num">1</span> Who we are</h3>
     <p>
-      Kube Rush is a casual endless / level runner game. Contact for privacy questions:
-      <a href="mailto:privacy@kuberush.app">privacy&#64;kuberush.app</a>
-      (replace with your live support email when the site goes online).
+      Kube Rush is a casual endless / level runner game developed by Doğuş İpeksaç.
+      For privacy questions, contact
+      <a href="mailto:ipeksac.dogus.19@gmail.com">ipeksac.dogus.19@gmail.com</a>.
     </p>
 
-    <h2>2. Information we collect</h2>
+    <h3><span class="num">2</span> Information we collect</h3>
     <p>Depending on platform and settings, we may process:</p>
     <ul>
-      <li><strong>Gameplay data stored on your device</strong> — coins/crystals, high score, settings, tutorial completion, equipped skins, and similar progress via local storage.</li>
-      <li><strong>Advertising identifiers</strong> — provided by the OS or ad SDKs (for example Google Advertising ID / IDFA where applicable) when ads are shown.</li>
-      <li><strong>Diagnostics / crash data</strong> — if Firebase Crashlytics or similar tools are enabled, anonymous crash logs and device/app version information.</li>
-      <li><strong>Approximate analytics</strong> — aggregated usage events (if analytics are enabled) such as session starts; we do not ask for your real name, email, or phone number to play.</li>
+      <li><strong>Gameplay data on your device:</strong> coins/crystals, high score, settings, tutorial completion, equipped skins, and similar progress via local storage</li>
+      <li><strong>Advertising identifiers:</strong> OS or ad SDK identifiers (for example Google Advertising ID / IDFA) when ads are shown</li>
+      <li><strong>Diagnostics / crash data:</strong> if Firebase Crashlytics or similar tools are enabled — crash logs and device/app version information</li>
+      <li><strong>Approximate analytics:</strong> aggregated usage events (if analytics are enabled), such as session starts; we do not ask for your real name, email, or phone number to play</li>
     </ul>
     <p>
       Display names you choose in-game are stored for profile / leaderboard use and should not include personal data you do not wish to share.
     </p>
 
-    <h2>3. How we use information</h2>
+    <h3><span class="num">3</span> How we use information</h3>
     <ul>
-      <li>To run the game, save progress, and remember settings.</li>
-      <li>To show advertisements (including rewarded ads) and measure ad performance.</li>
-      <li>To improve stability (crash reports) and fix bugs.</li>
-      <li>To grant promotional rewards such as one-time share bonuses stored only on device.</li>
+      <li>To run the game, save progress, and remember settings</li>
+      <li>To show advertisements (including rewarded ads) and measure ad performance</li>
+      <li>To improve stability (crash reports) and fix bugs</li>
+      <li>To grant promotional rewards such as one-time share bonuses stored only on device</li>
     </ul>
 
-    <h2>4. Advertising</h2>
+    <h3><span class="num">4</span> Advertising</h3>
     <p>
-      The App may use <strong>Google Mobile Ads (AdMob)</strong> and consent tooling (for example Google UMP)
-      where required. Ad partners may use cookies or device identifiers to serve personalized or
-      non-personalized ads according to your consent choices and regional law (including GDPR / CCPA where applicable).
+      The App may use <strong>Google Mobile Ads (AdMob)</strong> and consent tooling (for example Google UMP) where required.
+      Ad partners may use cookies or device identifiers to serve personalized or non-personalized ads according to your consent choices and regional law (including GDPR / CCPA where applicable).
     </p>
     <p>
-      You can often limit ad personalization in your device settings (Android Advertising ID /
-      iOS App Tracking Transparency / Limit Ad Tracking).
+      You can often limit ad personalization in your device settings (Android Advertising ID / iOS App Tracking Transparency / Limit Ad Tracking).
+      Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>
     </p>
 
-    <h2>5. Sharing of information</h2>
+    <h3><span class="num">5</span> Sharing of information</h3>
     <p>We do not sell your personal information. Data may be processed by service providers solely to operate the App, for example:</p>
     <ul>
-      <li>Google (Ads / Mobile Ads / Firebase)</li>
-      <li>Apple / Google as app store platforms</li>
+      <li><strong>Google:</strong> Ads / Mobile Ads / Firebase</li>
+      <li><strong>Apple / Google:</strong> as app store platforms</li>
     </ul>
     <p>These parties act under their own privacy policies when they process data as independent controllers or processors.</p>
 
-    <h2>6. Data retention</h2>
+    <h3><span class="num">6</span> Data retention</h3>
     <p>
       Local progress remains on your device until you clear app data, uninstall the App, or we provide an in-app reset.
       Crash / analytics retention follows the retention settings of the underlying provider.
     </p>
 
-    <h2>7. Children</h2>
+    <h3><span class="num">7</span> Children</h3>
     <p>
-      Kube Rush is a general audience hypercasual game. We do not knowingly collect personal information from children
-      for the purpose of selling data. If you believe a child has provided personal data inappropriately, contact us and we will delete it where feasible.
+      Kube Rush is a general audience hypercasual game. We do not knowingly collect personal information from children for the purpose of selling data.
+      If you believe a child has provided personal data inappropriately, contact us and we will delete it where feasible.
       Where required by law, ads may be served in a non-personalized manner.
     </p>
 
-    <h2>8. International transfers</h2>
+    <h3><span class="num">8</span> International transfers</h3>
     <p>
       Service providers may process data in countries other than your own. Where required, appropriate safeguards are applied by those providers.
     </p>
 
-    <h2>9. Your rights</h2>
-    <p>Depending on your region, you may have rights to access, correct, delete, or restrict certain processing, and to withdraw consent for personalized ads. To exercise rights related to data we control, email us. For advertising identifiers, use your device / OS privacy settings.</p>
-
-    <h2>10. Security</h2>
+    <h3><span class="num">9</span> Your rights</h3>
     <p>
-      We use reasonable technical measures (including local encrypted storage for profile data where implemented)
-      to protect information on device. No method of transmission or storage is 100% secure.
+      Depending on your region, you may have rights to access, correct, delete, or restrict certain processing, and to withdraw consent for personalized ads.
+      To exercise rights related to data we control, email us. For advertising identifiers, use your device / OS privacy settings.
     </p>
 
-    <h2>11. Changes</h2>
+    <h3><span class="num">10</span> Security</h3>
+    <p>
+      We use reasonable technical measures (including local encrypted storage for profile data where implemented) to protect information on device.
+      No method of transmission or storage is 100% secure.
+    </p>
+
+    <h3><span class="num">11</span> Changes</h3>
     <p>
       We may update this policy from time to time. The “Last updated” date at the top will change.
       Continued use of the App after updates constitutes acceptance of the revised policy where permitted by law.
     </p>
 
-    <h2>12. Contact</h2>
-    <p>
-      Privacy requests: <a href="mailto:privacy@kuberush.app">privacy&#64;kuberush.app</a><br />
-      App: Kube Rush — <code>com.dogusipeksac.kuberush</code>
-    </p>
+    <div class="contact-box">
+      <h3><span class="num">12</span> Contact</h3>
+      <p><strong>Developer:</strong> Doğuş İpeksaç</p>
+      <p><strong>App:</strong> Kube Rush — <code style="color:var(--primary);font-weight:600;">com.dogusipeksac.kuberush</code></p>
+      <p><strong>Email:</strong> <a href="mailto:ipeksac.dogus.19@gmail.com">ipeksac.dogus.19@gmail.com</a></p>
+    </div>
 
-    <nav>
-      <a href="./terms.html">Terms of Use</a>
-      <a href="./index.html">Home</a>
-    </nav>
+    <p class="copyright">© 2026 Doğuş İpeksaç. All rights reserved.</p>
   </div>
 </body>
 </html>
