@@ -11,6 +11,8 @@ Doğuş İpeksaç mobil uygulamalarının gizlilik politikalarının barındır�
 | Anı Yakala | `/capturethemoment/` | `capturethemoment/index.html` |
 | App Plaka Kontrol | `/app_plaka_kontrol/` | `app_plaka_kontrol/index.html` |
 | Kube Rush | `/kuberush/` | `kuberush/index.html` |
+| Polyrun | `/polyrun/` | `polyrun/index.html` |
+| YDS Kelime KitApp | `/yds-kelime-kitapp/` | `yds-kelime-kitapp/index.html` |
 
 ## Yeni uygulama ekleme
 

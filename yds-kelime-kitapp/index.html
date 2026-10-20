@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gizlilik Politikası · YDS Kelime KitApp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0F1220;
+      --card: #171B2E;
+      --ink: #F1F5F9;
+      --ink-soft: #94A3B8;
+      --primary: #818CF8;
+      --primary-soft: rgba(129, 140, 248, 0.14);
+      --accent: #FBBF24;
+      --accent-soft: rgba(251, 191, 36, 0.12);
+      --line: #2A3148;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 16px;
+      padding: 32px 20px 64px;
+    }
+
+    .back-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      margin: 0 auto 24px;
+      width: fit-content;
+      max-width: 760px;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: 20px;
+      padding: 48px 44px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--line);
+    }
+
+    .header {
+      padding: 28px 28px 30px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #1E1B4B 0%, #0F1220 55%, #1E293B 100%);
+      border: 1px solid rgba(129, 140, 248, 0.28);
+      color: white;
+      margin-bottom: 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      right: -30px;
+      top: -30px;
+      width: 140px;
+      height: 140px;
+      background: rgba(251, 191, 36, 0.1);
+      border-radius: 50%;
+    }
+
+    .header .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(129, 140, 248, 0.18);
+      color: var(--primary);
+      padding: 5px 12px;
+      border-radius: 100px;
+      margin-bottom: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header .updated {
+      font-size: 14px;
+      color: var(--ink-soft);
+      position: relative;
+      z-index: 1;
+    }
+
+    .intro {
+      font-size: 16px;
+      color: var(--ink-soft);
+      padding: 20px 22px;
+      background: var(--primary-soft);
+      border-left: 4px solid var(--primary);
+      border-radius: 10px;
+      margin-bottom: 36px;
+    }
+
+    .intro strong { color: var(--primary); font-weight: 700; }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 32px 0 14px;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h3 .num {
+      display: inline-grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    h3:nth-of-type(even) .num {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    p { color: var(--ink-soft); margin-bottom: 12px; }
+    p strong { color: var(--ink); font-weight: 700; }
+
+    ul {
+      list-style: none;
+      margin: 6px 0 14px;
+    }
+
+    li {
+      position: relative;
+      padding: 10px 0 10px 30px;
+      color: var(--ink-soft);
+      border-bottom: 1px dashed var(--line);
+    }
+
+    li:last-child { border-bottom: none; }
+
+    li::before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 17px;
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px var(--primary-soft);
+    }
+
+    li strong { color: var(--ink); font-weight: 700; }
+
+    a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1.5px solid rgba(129, 140, 248, 0.3);
+      transition: border-color 0.2s;
+    }
+
+    a:hover { border-bottom-color: var(--primary); }
+
+    .contact-box {
+      margin-top: 28px;
+      padding: 22px 24px;
+      background: linear-gradient(135deg, var(--accent-soft), var(--primary-soft));
+      border-radius: 12px;
+      border: 1px solid rgba(129, 140, 248, 0.2);
+    }
+
+    .contact-box h3 { margin-top: 0; }
+    .contact-box h3 .num { background: var(--primary); color: #0F1220; }
+
+    .copyright {
+      text-align: center;
+      color: var(--ink-soft);
+      font-size: 14px;
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 16px 12px 40px; }
+      .container { padding: 28px 22px; border-radius: 16px; }
+      .header { padding: 24px 22px; }
+      .header h1 { font-size: 26px; }
+      h3 { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="back-link" href="../">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M12 19l-7-7 7-7"/>
+    </svg>
+    Tüm uygulamalar
+  </a>
+
+  <div class="container">
+    <div class="header">
+      <span class="badge">YDS Kelime KitApp</span>
+      <h1>Gizlilik Politikası</h1>
+      <div class="updated"><strong>Son güncelleme:</strong> 20 Ekim 2026</div>
+    </div>
+
+    <div class="intro">
+      Bu Gizlilik Politikası, <strong>YDS Kelime KitApp</strong> (“Uygulama”) tarafından işlenen kişisel verileri açıklar.
+      Uygulamayı indirerek veya kullanarak bu metni okuduğunuzu kabul etmiş sayılırsınız.
+    </div>
+
+    <h3><span class="num">1</span> Giriş</h3>
+    <p>
+      Bu Gizlilik Politikası, YDS Kelime KitApp (“Uygulama”) tarafından işlenen kişisel verileri açıklar.
+      Uygulamayı indirerek veya kullanarak bu metni okuduğunuzu kabul etmiş sayılırsınız.
+    </p>
+
+    <h3><span class="num">2</span> Veri sorumlusu</h3>
+    <p>
+      Uygulama <strong>Doğuş İpeksaç</strong> tarafından sunulmaktadır. Sorularınız için Google Play / App Store geliştirici iletişim kanallarını veya
+      <a href="mailto:dogusipeksac@gmail.com">dogusipeksac@gmail.com</a> adresini kullanabilirsiniz.
+    </p>
+
+    <h3><span class="num">3</span> Topladığımız veriler</h3>
+    <p>Uygulama temel olarak cihazınızda çalışır. Toplanan / saklanan bilgiler:</p>
+    <ul>
+      <li><strong>Çalışma ilerlemesi:</strong> gün, aşama, doğru/yanlış, öğrenilen kelimeler</li>
+      <li><strong>Tercihler:</strong> ses, titreşim, bildirim saati, onboarding durumu</li>
+      <li><strong>Satın alma önbelleği:</strong> mağazadan doğrulanan ürün kimlikleri; yerel kayıt</li>
+      <li><strong>Bildirim izni durumu:</strong> sistem tarafından yönetilir</li>
+    </ul>
+    <p>
+      Hesap oluşturmazsınız; ad, e-posta veya profil fotoğrafı istemeyiz.
+      Kelime içerikleri cihazınıza gömülüdür; çalışma için internet zorunlu değildir.
+    </p>
+
+    <h3><span class="num">4</span> Satın alma verileri</h3>
+    <p>
+      Ücretli paketler Google Play veya App Store üzerinden satılır. Ödeme kartı bilgileriniz bize iletilmez; tahsilat ilgili mağaza tarafından yapılır.
+      Uygulama, mağazanın bildirdiği satın alma / geri yükleme sonucunu cihazda önbelleğe alabilir.
+      Şu an sunucu tarafı makbuz doğrulaması yoktur; mağaza kayıtları asıl kaynaktır.
+    </p>
+
+    <h3><span class="num">5</span> Bildirimler</h3>
+    <p>
+      İzin verirseniz yerel (cihaz içi) çalışma hatırlatmaları gönderilir.
+      Bu bildirimler uzak bir sunucudan “push” olarak gelmez; hatırlatma içeriği cihazda planlanır.
+      İzni sistem ayarlarından veya uygulama tercihlerinden kapatabilirsiniz.
+    </p>
+
+    <h3><span class="num">6</span> Analitik, reklam ve çökme raporları</h3>
+    <p>
+      Reklam SDK’sı kullanılmaz. Kararlılık için <strong>Firebase Crashlytics</strong> ile anonim çökme / hata raporları Google’a iletilebilir
+      (cihaz modeli, işletim sistemi, uygulama sürümü, yığın izi).
+      Bu veriler reklam veya pazarlama profili oluşturmak için kullanılmaz.
+      Google’ın Firebase gizlilik kuralları da geçerlidir.
+    </p>
+
+    <h3><span class="num">7</span> Verilerin saklanması ve güvenlik</h3>
+    <p>
+      İlerleme ve tercihler cihazınızdaki yerel depolamada tutulur.
+      Android’de uygulama verilerinin bulut yedeğine dahil edilmesi kısıtlanmıştır.
+      Köklü / jailbreak’li cihazlarda yerel veriler değiştirilebilir; bu risk kullanıcıya aittir.
+      Uygulamayı silerseniz yerel ilerleme silinebilir.
+    </p>
+
+    <h3><span class="num">8</span> Üçüncü taraflar</h3>
+    <p>
+      Mağaza (Google / Apple), cihaz işletim sistemi ve isteğe bağlı paylaşım ekranı kendi gizlilik kurallarına tabidir.
+      Google Fonts kullanılıyorsa yazı tipi dosyaları cihazınıza indirilebilir; bu, Google’ın ilgili hizmet koşullarına bağlı olabilir.
+    </p>
+
+    <h3><span class="num">9</span> Çocuklar</h3>
+    <p>
+      Uygulama genel eğitim amaçlıdır; 13 yaş altı çocuklardan bilerek kişisel veri toplamayız.
+      Ebeveynler mağaza hesaplarını yönetmelidir.
+    </p>
+
+    <h3><span class="num">10</span> Haklarınız</h3>
+    <p>
+      Yerel verilerinizi uygulama silerek veya cihaz ayarlarından temizleyerek silebilirsiniz.
+      Satın alma geçmişi için Google Play / App Store hesap araçlarını kullanın.
+      KVKK kapsamındaki talepleriniz için
+      <a href="mailto:dogusipeksac@gmail.com">dogusipeksac@gmail.com</a> adresine yazabilirsiniz.
+    </p>
+
+    <h3><span class="num">11</span> Değişiklikler</h3>
+    <p>
+      Bu metni güncelleyebiliriz. Önemli değişikliklerde sürüm notlarında veya uygulama içinde bilgilendirme yapılır.
+      “Son güncelleme” tarihine bakın.
+    </p>
+
+    <div class="contact-box">
+      <h3><span class="num">✉</span> İletişim</h3>
+      <p><strong>Geliştirici:</strong> Doğuş İpeksaç</p>
+      <p><strong>Uygulama:</strong> YDS Kelime KitApp</p>
+      <p><strong>E-posta:</strong> <a href="mailto:dogusipeksac@gmail.com">dogusipeksac@gmail.com</a></p>
+    </div>
+
+    <div class="copyright">© 2026 Doğuş İpeksaç</div>
+  </div>
+</body>
+</html>
