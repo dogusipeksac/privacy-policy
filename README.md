@@ -13,6 +13,7 @@ Doğuş İpeksaç mobil uygulamalarının gizlilik politikalarının barındır�
 | Kube Rush | `/kuberush/` | `kuberush/index.html` |
 | Polyrun | `/polyrun/` | `polyrun/index.html` |
 | YDS Kelime KitApp | `/yds-kelime-kitapp/` | `yds-kelime-kitapp/index.html` |
+| Günlüğüm / My Diary | `/mydiary/` | `mydiary/index.html` |
 
 ## Yeni uygulama ekleme
 
