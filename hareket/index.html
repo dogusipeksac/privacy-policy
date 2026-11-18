@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gizlilik Politikası · HAREKET: Egzersiz & Kas Rehberi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #101214;
+      --card: #1B1E21;
+      --ink: #F5F7F2;
+      --ink-soft: #AAB1AA;
+      --primary: #C6F36B;
+      --primary-soft: rgba(198, 243, 107, 0.14);
+      --accent: #38BDF8;
+      --accent-soft: rgba(56, 189, 248, 0.12);
+      --line: #2B3137;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 16px;
+      padding: 32px 20px 64px;
+    }
+
+    .back-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      margin: 0 auto 24px;
+      width: fit-content;
+      max-width: 760px;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 44px 36px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    .header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 28px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      background: var(--primary-soft);
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .header .updated {
+      font-size: 14px;
+      color: var(--ink-soft);
+    }
+
+    .intro {
+      font-size: 16px;
+      color: var(--ink-soft);
+      padding: 20px 22px;
+      background: var(--primary-soft);
+      border-left: 4px solid var(--primary);
+      border-radius: 10px;
+      margin-bottom: 36px;
+    }
+
+    .intro strong { color: var(--primary); font-weight: 700; }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 32px 0 14px;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2 .num {
+      display: inline-grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    p { color: var(--ink-soft); margin-bottom: 12px; }
+    p strong { color: var(--ink); font-weight: 700; }
+
+    ul {
+      list-style: none;
+      margin: 6px 0 14px;
+    }
+
+    li {
+      position: relative;
+      padding: 10px 0 10px 30px;
+      color: var(--ink-soft);
+      border-bottom: 1px dashed var(--line);
+    }
+
+    li:last-child { border-bottom: none; }
+
+    li::before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 17px;
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px var(--primary-soft);
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    code {
+      color: var(--primary);
+      background: rgba(255, 255, 255, 0.06);
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      margin-top: 40px;
+      padding-top: 24px;
+      font-size: 14px;
+      color: var(--ink-soft);
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 16px 12px 48px; }
+      .container { padding: 28px 20px; }
+      h1 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="back-link" href="../">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M12 19l-7-7 7-7"/>
+    </svg>
+    Tüm Gizlilik Politikaları
+  </a>
+
+  <div class="container">
+    <div class="header">
+      <div class="badge">Sağlık &amp; Fitness Uygulaması</div>
+      <h1>HAREKET: Egzersiz &amp; Kas Rehberi</h1>
+      <div class="updated">Son güncelleme: 18 Kasım 2026 · Paket Kimliği: <code>com.hareket.app</code> · Geliştirici: Doğuş İpeksaç</div>
+    </div>
+
+    <div class="intro">
+      <strong>HAREKET</strong> (iOS, iPadOS ve Android yerel mobil uygulamaları), kullanıcıların spor hareketlerini doğru formla öğrenmesi, çalışan kas gruplarını incelemesi ve elindeki ekipmana uygun egzersizleri keşfetmesi için tasarlanmış <strong>%100 çevrimdışı</strong> bir kütüphanedir. Kullanıcı hesabı açılmaz ve hiçbir kişisel veri uzak sunuculara gönderilmez.
+    </div>
+
+    <h2><span class="num">1</span> Cihazınızda Yerel Olarak Saklanan Veriler</h2>
+    <p>Uygulama yalnızca deneyiminizi kişiselleştirmek amacıyla aşağıdaki bilgileri kendi cihazınızda yerel olarak tutar:</p>
+    <ul>
+      <li><strong>Favori Egzersizleriniz:</strong> Favorilere eklediğiniz hareket kimlikleri (Android'de <em>Room SQLite</em>, iOS'ta <em>SwiftData</em> yerel veritabanında).</li>
+      <li><strong>Görünüm ve Erişilebilirlik Tercihleriniz:</strong> Seçtiğiniz tema (Koyu, Açık veya Sistem) ve azaltılmış hareket (animasyon duraklatma) tercihi (Android'de <em>DataStore</em>, iOS'ta <em>UserDefaults</em> üzerinde).</li>
+    </ul>
+    <p>Bu veriler cihazınızdan dışarı çıkmaz ve hiçbir bulut sunucusuna iletilmez. Uygulamayı sildiğinizde veya uygulama içi <strong>"Favorileri Temizle"</strong> butonunu kullandığınızda tamamen silinir.</p>
+
+    <h2><span class="num">2</span> Toplamadığımız Kişisel Veriler</h2>
+    <ul>
+      <li>Ad, soyad, e-posta adresi, telefon numarası veya kullanıcı hesabı bilgileri <strong>toplanmaz</strong>.</li>
+      <li>Cihaz konumu (GPS), kamera, mikrofon veya rehber erişimi <strong>istenmez ve kullanılmaz</strong>.</li>
+      <li>Üçüncü taraf reklam ağı (AdMob vb.) veya kullanıcı takip SDK'sı <strong>bulunmaz</strong>.</li>
+      <li>Sağlık geçmişi, vücut ölçüsü veya biyometrik sağlık verisi <strong>toplanmaz</strong>.</li>
+    </ul>
+
+    <h2><span class="num">3</span> Sağlık ve Güvenlik Sorumluluk Reddi</h2>
+    <p>Uygulama içerisindeki tüm egzersiz açıklamaları, kinematik vektör animasyonları, kas diyagramları ve örnek set/tekrar aralıkları <strong>yalnızca genel spor ve egzersiz eğitimi amaçlıdır</strong>; tıbbi teşhis, fizik tedavi protokolü veya hekim tavsiyesi yerine geçmez.</p>
+    <ul>
+      <li>Herhangi bir egzersiz programına başlamadan önce, özellikle kalp-damar rahatsızlığınız, eklem/omurga yaralanmanız veya kronik sağlık sorununuz varsa mutlaka uzman bir hekime danışın.</li>
+      <li>Hareket sırasında keskin eklem ağrısı, baş dönmesi veya nefes darlığı hissederseniz egzersizi derhal sonlandırın.</li>
+    </ul>
+
+    <h2><span class="num">4</span> Çocukların Gizliliği</h2>
+    <p>Uygulamamız genel kitleye (4+ / PEGI 3) uygun eğitsel spor içeriği sunar ve hiçbir yaş grubundan kişisel veri toplamaz.</p>
+
+    <h2><span class="num">5</span> Veri Silme ve Kullanıcı Hakları</h2>
+    <p>Tüm tercihleriniz yalnızca kendi cihazınızda tutulduğu için, verilerinizi dilediğiniz an uygulama içinden sıfırlayabilir veya uygulamayı cihazınızdan kaldırarak tüm yerel kayıtları kalıcı olarak silebilirsiniz.</p>
+
+    <h2><span class="num">6</span> İletişim</h2>
+    <p>Gizlilik politikası veya uygulama ile ilgili her türlü soru, öneri ve talepleriniz için bizimle iletişime geçebilirsiniz:</p>
+    <p>E-posta: <a href="mailto:ipeksac.dogus.19@gmail.com">ipeksac.dogus.19@gmail.com</a></p>
+
+    <div class="footer">
+      <p>© 2026 Doğuş İpeksaç. Tüm hakları saklıdır.</p>
+    </div>
+  </div>
+
+</body>
+</html>

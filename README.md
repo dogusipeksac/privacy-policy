@@ -14,6 +14,8 @@ Doğuş İpeksaç mobil uygulamalarının gizlilik politikalarının barındır�
 | Polyrun | `/polyrun/` | `polyrun/index.html` |
 | YDS Kelime KitApp | `/yds-kelime-kitapp/` | `yds-kelime-kitapp/index.html` |
 | Günlüğüm / My Diary | `/mydiary/` | `mydiary/index.html` |
+| Hayat Simülasyonu | `/life-simulation/` | `life-simulation/index.html` |
+| HAREKET: Egzersiz & Kas Rehberi | `/hareket/` | `hareket/index.html` |
 
 ## Yeni uygulama ekleme
 
