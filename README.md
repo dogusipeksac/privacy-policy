@@ -16,6 +16,7 @@ Doğuş İpeksaç mobil uygulamalarının gizlilik politikalarının barındır�
 | Günlüğüm / My Diary | `/mydiary/` | `mydiary/index.html` |
 | Hayat Simülasyonu | `/life-simulation/` | `life-simulation/index.html` |
 | HAREKET: Egzersiz & Kas Rehberi | `/hareket/` | `hareket/index.html` |
+| Telefonu Ver (Pass The Phone) | `/passthephone/` | `passthephone/index.html` |
 
 ## Yeni uygulama ekleme
 
