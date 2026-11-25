@@ -17,6 +17,7 @@ Doğuş İpeksaç mobil uygulamalarının gizlilik politikalarının barındır�
 | Hayat Simülasyonu | `/life-simulation/` | `life-simulation/index.html` |
 | HAREKET: Egzersiz & Kas Rehberi | `/hareket/` | `hareket/index.html` |
 | Telefonu Ver (Pass The Phone) | `/passthephone/` | `passthephone/index.html` |
+| Bizim Dünyamız (Our World) | `/ourworld/` | `ourworld/index.html` |
 
 ## Yeni uygulama ekleme
 
